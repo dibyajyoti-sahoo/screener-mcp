@@ -1,0 +1,22 @@
+services:
+  screener-mcp-server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: screener-mcp-server
+    env_file:
+      - .env
+    networks:
+      - screener-mcp-network
+    volumes:
+      - screener-mcp-data:/app/data
+    ports:
+      - "11245:11345"
+
+networks:
+  screener-mcp-network:
+    external: true
+
+volumes:
+  screener-mcp-data:
+    external: true
