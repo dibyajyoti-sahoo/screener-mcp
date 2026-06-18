@@ -11,7 +11,7 @@ services:
     volumes:
       - screener-mcp-data:/app/data
     ports:
-      - "11245:11345"
+      - "11145:11345"
 
 networks:
   screener-mcp-network:

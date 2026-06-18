@@ -20,6 +20,7 @@ docker volume create "$VOLUME_NAME"
 if [ ! -f ".env" ]; then
     echo ".env not found, creating from .env.example"
     cp .env.example .env
+    echo ".env creating from .env.example"
 fi
 
 echo "Building image..."
