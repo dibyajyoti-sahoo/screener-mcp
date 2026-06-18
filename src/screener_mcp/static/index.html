@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DISHA AI · Screener MCP</title>
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <main class="wrap">
+    <div class="banner-box" id="bannerBox">
+      <img class="banner" id="banner" src="/banner"
+           alt="DISHA AI — Empowering the Future with Intelligent Solutions" />
+    </div>
+
+    <section class="card">
+      <div class="status">
+        <span class="dot" id="dot"></span>
+        <h1 id="statusTitle">Screener MCP server</h1>
+        <span class="badge" id="badge">checking…</span>
+      </div>
+      <p class="sub">Indian stock research over the Model Context Protocol — by DISHA&nbsp;AI.</p>
+
+      <div class="block">
+        <h2>Endpoints</h2>
+        <div class="ep">
+          <span class="method">GET</span><span class="path">/sse</span>
+          <span class="desc">MCP event stream</span>
+        </div>
+        <div class="ep">
+          <span class="method">GET</span><span class="path">/health</span>
+          <span class="desc">liveness check</span>
+        </div>
+      </div>
+
+      <div class="block" id="authBlock" hidden>
+        <h2>Authenticating</h2>
+        <div id="authBody"></div>
+      </div>
+    </section>
+
+    <p class="foot">Screener data sourced from Screener.in · point-in-time, not investment advice.</p>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
